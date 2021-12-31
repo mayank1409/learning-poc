@@ -13,24 +13,27 @@
 </head>
 <body>
 </body>
-<div class="container">
 
-	<div>
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/">Spring MVC Application</a>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/user/registration"><span
-							class="glyphicon glyphicon-log-in"></span>Sign UP</a></li>
-				</ul>
+<div>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Spring MVC Application</a>
 			</div>
-		</nav>
-	</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/user/registration"><span
+						class="glyphicon glyphicon-log-in"></span> Sign UP</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<br />
+<br />
 
-	<br /> <br />
-
+<center>
+	<strong><font color="red" style="align-content: center;">${message}</font></strong>
+</center>
+<div class="container">
 	<div>
 		<form:form method="post" modelAttribute="loginDto">
 			<fieldset class="form-group">

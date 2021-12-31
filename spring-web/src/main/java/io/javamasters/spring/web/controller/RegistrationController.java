@@ -1,6 +1,7 @@
 package io.javamasters.spring.web.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -29,7 +30,7 @@ public class RegistrationController {
 
 	@Autowired
 	private IUserService userService;
-	
+
 	@GetMapping("/")
 	public String redirectToRegistrationPage() {
 		return "redirect:/user/registration";
@@ -98,13 +99,16 @@ public class RegistrationController {
 		mav.addObject("email", loginDto.getEmail());
 		return mav;
 	}
-	
+
 	@GetMapping("/user/logout")
 	public String logout(final HttpServletRequest request, final ModelMap model) {
 		LOGGER.debug("Logout Method Called");
-		request.getSession().invalidate();
+		HttpSession session = request.getSession();
+		if (session.getAttribute("email") != null) {
+			session.removeAttribute("email");
+		}
 		model.put("message", "Logout Sucessful");
 		return "redirect:/user/login";
 	}
-	
+
 }

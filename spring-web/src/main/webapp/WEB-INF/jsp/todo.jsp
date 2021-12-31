@@ -31,6 +31,14 @@
 				required="required" />
 			<form:errors path="targetDate" cssClass="text-warning" />
 		</fieldset>
+
+		<fieldset class="form-group">
+			<form:label path="done">
+								Is it Done?:</form:label>
+			<form:checkbox path="done" value="done" />
+			<form:errors path="done" cssClass="text-warning" />
+		</fieldset>
+
 		<button type="submit" class="btn btn-success">Add</button>
 	</form:form>
 </div>

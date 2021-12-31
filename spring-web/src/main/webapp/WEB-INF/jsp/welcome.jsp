@@ -13,20 +13,23 @@
 </head>
 <body>
 
-	<div class="container">
-		<div>
-			<nav class="navbar navbar-inverse">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="#">Spring MVC Application</a>
-					</div>
+	<div>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Spring MVC Application</a>
 				</div>
-			</nav>
-		</div>
-		<br /> <br />
+			</div>
+		</nav>
+	</div>
+	<br />
+	<br />
+
+	<div class="container">
+
 		<h1 class="alert alert-success">Welcome ${email}</h1>
 		<h2>
-			<a href="/todos">Click Here</a> to View Your Todos
+			<a href="/todos">Click Here</a> to Manage Your Todos
 		</h2>
 	</div>
 </body>
